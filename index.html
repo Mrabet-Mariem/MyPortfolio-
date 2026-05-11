@@ -1,1 +1,565 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mariem Mrabet - Software Engineering Student Portfolio" />
+  <title>Mariem Mrabet | Portfolio</title>
 
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="light-mode" data-lang="en">
+
+  <!-- ===== LOADER ===== -->
+  <div id="loader">
+    <div class="loader-inner">
+      <span>M</span><span>M</span>
+    </div>
+  </div>
+
+  <!-- ===== NAVBAR ===== -->
+  <header id="navbar">
+    <nav class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>MM<span class="logo-bracket">/&gt;</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero"     data-i18n="nav_home">Home</a></li>
+        <li><a href="#about"    data-i18n="nav_about">About</a></li>
+        <li><a href="#skills"   data-i18n="nav_skills">Skills</a></li>
+        <li><a href="#projects" data-i18n="nav_projects">Projects</a></li>
+        <li><a href="#contact"  data-i18n="nav_contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-controls">
+        <!-- Language Switcher -->
+        <div class="lang-switcher" id="langSwitcher">
+          <button class="lang-btn active" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="fr">FR</button>
+          <button class="lang-btn" data-lang="ar">AR</button>
+          <button class="lang-btn" data-lang="tr">TR</button>
+        </div>
+
+        <!-- Dark Mode Toggle -->
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+          <i class="fas fa-moon" id="themeIcon"></i>
+        </button>
+
+        <!-- Hamburger -->
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section id="hero">
+    <div class="hero-bg">
+      <div class="hero-shape shape-1"></div>
+      <div class="hero-shape shape-2"></div>
+      <div class="hero-shape shape-3"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-greeting" data-i18n="hero_greeting">Hello, I'm</p>
+      <h1 class="hero-name">Mariem Mrabet</h1>
+      <div class="hero-title-wrapper">
+        <span data-i18n="hero_role_prefix">I'm a </span>
+        <span class="typed-text" id="typedText"></span>
+        <span class="cursor">|</span>
+      </div>
+      <p class="hero-desc" data-i18n="hero_desc">
+        3rd-year Software Engineering student passionate about software development
+        and problem solving. Based in Istanbul, Turkey.
+      </p>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn btn-primary" data-i18n="hero_btn_work">View My Work</a>
+        <a href="#contact"  class="btn btn-outline" data-i18n="hero_btn_contact">Contact Me</a>
+      </div>
+      <div class="hero-socials">
+        <a href="mailto:mariemrabet20@gmail.com" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://github.com/mariemmrabet" target="_blank" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-avatar">
+        <div class="avatar-ring"></div>
+        <div class="avatar-img">
+          <i class="fas fa-user-astronaut"></i>
+        </div>
+      </div>
+      <div class="floating-badge badge-1">
+        <i class="fab fa-python"></i> Python
+      </div>
+      <div class="floating-badge badge-2">
+        <i class="fas fa-database"></i> MySQL
+      </div>
+      <div class="floating-badge badge-3">
+        <i class="fab fa-js"></i> JavaScript
+      </div>
+    </div>
+    <a href="#about" class="scroll-down">
+      <i class="fas fa-chevron-down"></i>
+    </a>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="about_tag">About Me</span>
+        <h2 data-i18n="about_title">Who Am I?</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text">
+          <p data-i18n="about_p1">
+            I am a 3rd-year Software Engineering student at Haliç University in Istanbul, Turkey.
+            I'm passionate about software development and problem solving, seeking an internship
+            to apply my academic knowledge in real projects.
+          </p>
+          <p data-i18n="about_p2">
+            I am a multilingual communicator (Arabic, French, English, Turkish) with strong
+            teamwork, leadership, and adaptability skills. I thrive in collaborative environments
+            and love tackling challenging technical problems.
+          </p>
+
+          <!-- Info Table -->
+          <table class="about-table">
+            <tbody>
+              <tr>
+                <td><i class="fas fa-map-marker-alt"></i></td>
+                <td><strong data-i18n="about_location_label">Location:</strong></td>
+                <td data-i18n="about_location">Istanbul, Turkey</td>
+              </tr>
+              <tr>
+                <td><i class="fas fa-phone"></i></td>
+                <td><strong data-i18n="about_phone_label">Phone:</strong></td>
+                <td>+90 (545) 190 6317</td>
+              </tr>
+              <tr>
+                <td><i class="fas fa-envelope"></i></td>
+                <td><strong data-i18n="about_email_label">Email:</strong></td>
+                <td>mariemrabet20@gmail.com</td>
+              </tr>
+              <tr>
+                <td><i class="fas fa-graduation-cap"></i></td>
+                <td><strong data-i18n="about_edu_label">University:</strong></td>
+                <td data-i18n="about_edu">Haliç University, Istanbul</td>
+              </tr>
+              <tr>
+                <td><i class="fas fa-language"></i></td>
+                <td><strong data-i18n="about_lang_label">Languages:</strong></td>
+                <td data-i18n="about_lang">Arabic, French (B2), English, Turkish</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <a href="assets/cv-mariem-mrabet.pdf" class="btn btn-primary" download>
+            <i class="fas fa-download"></i>
+            <span data-i18n="about_cv_btn">Download CV</span>
+          </a>
+        </div>
+
+        <!-- Education Timeline -->
+        <div class="about-timeline">
+          <h3 data-i18n="about_edu_title">Education</h3>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <span class="timeline-date">2023 – Present</span>
+                <h4 data-i18n="edu1_title">Software Engineering</h4>
+                <p data-i18n="edu1_school">Haliç University, Istanbul, Turkey</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <span class="timeline-date">2022</span>
+                <h4 data-i18n="edu2_title">Tunisian Baccalaureate in Mathematics</h4>
+                <p data-i18n="edu2_school">Lycée Erriadh, Sousse, Tunisia</p>
+              </div>
+            </div>
+          </div>
+
+          <h3 style="margin-top:2rem;" data-i18n="about_cert_title">Certificates</h3>
+          <div class="cert-cards">
+            <div class="cert-card">
+              <i class="fas fa-certificate"></i>
+              <div>
+                <strong>TCF – B2</strong>
+                <p data-i18n="cert1_desc">Test de Connaissance du Français</p>
+              </div>
+            </div>
+            <div class="cert-card">
+              <i class="fas fa-first-aid"></i>
+              <div>
+                <strong data-i18n="cert2_title">First Aid Training</strong>
+                <p data-i18n="cert2_desc">Tunisian Red Crescent, 2022</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS SECTION ===== -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="skills_tag">What I Know</span>
+        <h2 data-i18n="skills_title">My Skills</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Technical Skills -->
+        <div class="skills-card">
+          <h3><i class="fas fa-code"></i> <span data-i18n="skills_tech">Technical Skills</span></h3>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <div class="skill-bar-header">
+                <span>HTML / CSS</span><span>90%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="90"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header">
+                <span>JavaScript</span><span>80%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="80"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header">
+                <span>Python</span><span>75%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="75"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header">
+                <span>Java / C++</span><span>70%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="70"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header">
+                <span>PHP</span><span>65%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="65"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header">
+                <span>MySQL</span><span>80%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="80"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tools -->
+        <div class="skills-card">
+          <h3><i class="fas fa-tools"></i> <span data-i18n="skills_tools">Tools & IDEs</span></h3>
+          <div class="tools-grid">
+            <div class="tool-badge"><i class="fab fa-git-alt"></i> Git</div>
+            <div class="tool-badge"><i class="fas fa-code"></i> VS Code</div>
+            <div class="tool-badge"><i class="fab fa-java"></i> IntelliJ</div>
+            <div class="tool-badge"><i class="fas fa-project-diagram"></i> Eclipse</div>
+            <div class="tool-badge"><i class="fas fa-network-wired"></i> OMNeT++</div>
+            <div class="tool-badge"><i class="fas fa-database"></i> MySQL WB</div>
+            <div class="tool-badge"><i class="fab fa-github"></i> GitHub</div>
+            <div class="tool-badge"><i class="fas fa-file-word"></i> MS Office</div>
+          </div>
+        </div>
+
+        <!-- Soft Skills -->
+        <div class="skills-card">
+          <h3><i class="fas fa-brain"></i> <span data-i18n="skills_soft">Soft Skills</span></h3>
+          <div class="soft-skills-list">
+            <div class="soft-skill">
+              <i class="fas fa-comments"></i>
+              <span data-i18n="soft1">Multilingual Communication</span>
+            </div>
+            <div class="soft-skill">
+              <i class="fas fa-users"></i>
+              <span data-i18n="soft2">Teamwork & Leadership</span>
+            </div>
+            <div class="soft-skill">
+              <i class="fas fa-puzzle-piece"></i>
+              <span data-i18n="soft3">Problem Solving</span>
+            </div>
+            <div class="soft-skill">
+              <i class="fas fa-clock"></i>
+              <span data-i18n="soft4">Time Management</span>
+            </div>
+            <div class="soft-skill">
+              <i class="fas fa-sync-alt"></i>
+              <span data-i18n="soft5">Adaptability</span>
+            </div>
+            <div class="soft-skill">
+              <i class="fas fa-lightbulb"></i>
+              <span data-i18n="soft6">Creativity</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Languages -->
+        <div class="skills-card">
+          <h3><i class="fas fa-globe"></i> <span data-i18n="skills_languages">Languages</span></h3>
+          <div class="lang-levels">
+            <div class="lang-level-item">
+              <span data-i18n="lang_arabic">Arabic</span>
+              <div class="lang-dots">
+                <span class="dot active"></span>
+                <span class="dot active"></span>
+                <span class="dot active"></span>
+                <span class="dot active"></span>
+                <span class="dot active"></span>
+              </div>
+              <small data-i18n="lang_native">Native</small>
+            </div>
+            <div class="lang-level-item">
+              <span data-i18n="lang_french">French</span>
+              <div class="lang-dots">
+                <span class="dot active"></span>
+                <span class="dot active"></span>
+                <span class="dot active"></span>
+                <span class="dot active"></span>
+                <span class="dot"></span>
+              </div>
+              <small>B2</small>
+            </div>
+            <div class="lang-level-item">
+              <span data-i18n="lang_english">English</span>
+              <div class="lang-dots">
+                <span class="dot active"></span>
+                <span class="dot active"></span>
+                <span class="dot active"></span>
+                <span class="dot active"></span>
+                <span class="dot"></span>
+              </div>
+              <small data-i18n="lang_good">Good</small>
+            </div>
+            <div class="lang-level-item">
+              <span data-i18n="lang_turkish">Turkish</span>
+              <div class="lang-dots">
+                <span class="dot active"></span>
+                <span class="dot active"></span>
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+              <small data-i18n="lang_intermediate">Intermediate</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS SECTION ===== -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="projects_tag">My Work</span>
+        <h2 data-i18n="projects_title">Projects</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="project-filters" id="projectFilters">
+        <button class="filter-btn active" data-filter="all" data-i18n="filter_all">All</button>
+        <button class="filter-btn" data-filter="MySQL" data-i18n="filter_db">Database</button>
+        <button class="filter-btn" data-filter="Python" data-i18n="filter_python">Python</button>
+        <button class="filter-btn" data-filter="HTML" data-i18n="filter_web">Web</button>
+      </div>
+
+      <!-- Projects Grid (loaded via AJAX) -->
+      <div class="projects-grid" id="projectsGrid">
+        <div class="loading-spinner">
+          <i class="fas fa-circle-notch fa-spin"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LEADERSHIP SECTION ===== -->
+  <section id="leadership">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="leadership_tag">Community</span>
+        <h2 data-i18n="leadership_title">Leadership & Volunteering</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="leadership-grid">
+        <div class="leadership-card">
+          <div class="leadership-icon"><i class="fas fa-laptop-code"></i></div>
+          <div class="leadership-info">
+            <h4 data-i18n="lead1_title">Engineering Developers Club</h4>
+            <p data-i18n="lead1_org">Haliç University – Member</p>
+            <span class="leadership-date">2024 – 2025</span>
+          </div>
+        </div>
+        <div class="leadership-card">
+          <div class="leadership-icon"><i class="fas fa-hand-holding-heart"></i></div>
+          <div class="leadership-info">
+            <h4 data-i18n="lead2_title">Tunisian Red Crescent – Volunteer</h4>
+            <p data-i18n="lead2_org">Sousse, Tunisia</p>
+            <span class="leadership-date">2019 – 2023</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="contact_tag">Get In Touch</span>
+        <h2 data-i18n="contact_title">Contact Me</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <p data-i18n="contact_desc">
+            I'm currently looking for internship opportunities. Whether you have a question
+            or just want to say hello, my inbox is always open!
+          </p>
+          <div class="contact-cards">
+            <div class="contact-card">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <strong data-i18n="contact_email_label">Email</strong>
+                <p>mariemrabet20@gmail.com</p>
+              </div>
+            </div>
+            <div class="contact-card">
+              <i class="fas fa-phone"></i>
+              <div>
+                <strong data-i18n="contact_phone_label">Phone</strong>
+                <p>+90 (545) 190 6317</p>
+              </div>
+            </div>
+            <div class="contact-card">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <strong data-i18n="contact_location_label">Location</strong>
+                <p data-i18n="contact_location">Istanbul, Turkey</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="contactName" data-i18n="form_name">Full Name</label>
+            <input type="text" id="contactName" name="name"
+                   placeholder="Mariem Mrabet" required />
+            <span class="form-error" id="nameError"></span>
+          </div>
+          <div class="form-group">
+            <label for="contactEmail" data-i18n="form_email">Email Address</label>
+            <input type="email" id="contactEmail" name="email"
+                   placeholder="you@example.com" required />
+            <span class="form-error" id="emailError"></span>
+          </div>
+          <div class="form-group">
+            <label for="contactSubject" data-i18n="form_subject">Subject</label>
+            <input type="text" id="contactSubject" name="subject"
+                   placeholder="Internship Opportunity" required />
+            <span class="form-error" id="subjectError"></span>
+          </div>
+          <div class="form-group">
+            <label for="contactMessage" data-i18n="form_message">Message</label>
+            <textarea id="contactMessage" name="message" rows="5"
+                      placeholder="Your message..." required></textarea>
+            <span class="form-error" id="messageError"></span>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+            <i class="fas fa-paper-plane"></i>
+            <span data-i18n="form_send">Send Message</span>
+          </button>
+          <div id="formFeedback" class="form-feedback" role="alert"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-content">
+        <p>&copy; <span id="currentYear"></span> Mariem Mrabet.
+          <span data-i18n="footer_rights">All rights reserved.</span>
+        </p>
+        <div class="footer-socials">
+          <a href="mailto:mariemrabet20@gmail.com" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="https://github.com/mariemmrabet" target="_blank" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+        <p class="footer-admin">
+          <a href="admin/login.php" data-i18n="footer_admin">Admin Panel</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== SCROLL-TO-TOP ===== -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- ===== PROJECT MODAL ===== -->
+  <div class="modal-overlay" id="projectModal" role="dialog" aria-modal="true">
+    <div class="modal-box">
+      <button class="modal-close" id="modalClose" aria-label="Close">
+        <i class="fas fa-times"></i>
+      </button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/translations.js"></script>
+  <script src="assets/js/validation.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1373,3 +1373,7 @@ section {
   opacity: 1;
   transform: translateX(0);
 }
+/* Fix stuck loading screen */
+#loader {
+  display: none !important;
+}

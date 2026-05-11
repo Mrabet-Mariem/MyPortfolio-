@@ -1384,3 +1384,48 @@ section {
 #loader {
   display: none !important;
 }
+/* ============ MOBILE THEME FIX ============ */
+@media (max-width: 768px) {
+  .theme-toggle {
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    z-index: 1001;
+  }
+
+  .theme-toggle:active {
+    transform: scale(0.95);
+  }
+
+  /* Ensure dark mode colors work on mobile */
+  body.dark-mode {
+    background: #0f0f1a;
+    color: #e2e8f0;
+  }
+
+  body.light-mode {
+    background: #ffffff;
+    color: #1a1a2e;
+  }
+
+  /* Ensure section backgrounds work */
+  #about {
+    background: var(--clr-bg-alt);
+  }
+
+  #skills {
+    background: var(--clr-bg);
+  }
+
+  #projects {
+    background: var(--clr-bg-alt);
+  }
+
+  #leadership {
+    background: var(--clr-bg);
+  }
+
+  #contact {
+    background: var(--clr-bg-alt);
+  }
+}

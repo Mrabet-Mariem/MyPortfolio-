@@ -15,3 +15,11 @@ if ($conn->connect_error) {
 
 $conn->set_charset('utf8mb4');
 ?>
+
+--online----
+define('DB_HOST', 'sql111.infinityfree.com');
+define('DB_USER', 'if0_41891844');
+define('DB_PASS', 'Mimiweb123');
+define('DB_NAME', 'if0_41891844_portfolio_db');
+
+
